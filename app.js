@@ -7,6 +7,7 @@ var cors = require('cors');
 
 //var salasRouter = require('./routes/salas');
 var clientesRouter = require('./routes/clientesRoute');
+var pontos_turisticosRouter = require('./routes/pontos_turisticosRoute');
 //var funcionariosRouter = require('./routes/funcionarios');
 //var reservasRouter = require('./routes/reservas');
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/salas', salasRouter);
 app.use('/clientes', clientesRouter);
+app.use('/pontos_turisticos', pontos_turisticosRouter);
 //app.use('/funcionarios', funcionariosRouter);
 //app.use('/reservas', reservasRouter);
 

@@ -9,16 +9,16 @@ mongoose.connect("mongodb+srv://systempweriteam:r15dznm4quC80FnU@cluster0.r5lzt.
 
 var Schema = mongoose.Schema;
 
-const cliente = new Schema ({
 
-    cpf        : { type:Number, required: true},
-    nome       : { type:String, required: true},
-    cep        : { type:Number },
-    telefone   : { type:Number, required: true},
-    email      : { type:String, required: true}
-})
-
-const ClienteModel = mongoose.model('clientes', cliente);
+const pontos_turisticos = new Schema({
+  nome: { type: String, required: true },
+  descricao: { type: String},
+  cnpj: {type: String},
+  localizacao: { type: String, required: true },
+  dataCadastro: { type: Date, default: Date.now }
+});
 
 
-module.exports = {ClienteModel}
+const PontoTuristicoModel = mongoose.model('pontos_turisticos', pontos_turisticos);
+
+module.exports = { PontoTuristicoModel };
